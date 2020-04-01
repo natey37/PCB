@@ -1,0 +1,2 @@
+class ChargetagsController < ApplicationController
+end
