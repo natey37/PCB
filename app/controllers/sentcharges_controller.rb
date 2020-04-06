@@ -15,9 +15,25 @@ class SentchargesController < ApplicationController
             end
     end 
 
+    def edit
+        
+    end
+
+    def update
+        puts params 
+        sentcharge = Sentcharge.find(params[:id])
+        sentcharge.update({likes: params[:likes]})
+        if sentcharge.save
+            render json: {status: 'sentcharge successfully edited', likes: sentcharge}
+        else
+            render json: { errors: sentcharge.errors.full_messages }, status: :bad_request
+        end
+
+    end
+
     private 
 
     def sentcharge_params 
-        params.require(:sentcharge).permit(:charge_id, :user_id, :sent_user_id, :sentiment_score, :likes)
+        params.require(:sentcharge).permit(:id, :charge_id, :user_id, :sent_user_id, :sentiment_score, :likes, :message)
     end 
 end

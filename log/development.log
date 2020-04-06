@@ -3023,3 +3023,1450 @@ Processing by SentchargesController#create as */*
 Completed 201 Created in 27ms (Views: 0.3ms | ActiveRecord: 21.4ms | Allocations: 4489)
 
 
+Started POST "/score" for ::1 at 2020-04-06 17:01:24 -0400
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"testing", "charge"=>{"message"=>"testing"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "testing"], ["created_at", "2020-04-06 21:01:24.809917"], ["updated_at", "2020-04-06 21:01:24.809917"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 376ms (Views: 0.9ms | ActiveRecord: 19.0ms | Allocations: 32685)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 17:01:24 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>89, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0.10000000149011612, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>89, "sent_user_id"=>2, "sentiment_score"=>0.10000000149011612, "likes"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.4ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (4.8ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 89], ["sent_user_id", 2], ["sentiment_score", 0.10000000149011612], ["likes", 0], ["created_at", "2020-04-06 21:01:24.896370"], ["updated_at", "2020-04-06 21:01:24.896370"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 42ms (Views: 0.3ms | ActiveRecord: 15.9ms | Allocations: 17037)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:01:30 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:08:37 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.9ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1869)
+
+
+  [1m[36mSentcharge Load (2.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" ORDER BY "sentcharges"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSentcharge Load (1.1ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" ORDER BY "sentcharges"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSentcharge Load (0.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" ORDER BY "sentcharges"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCharge Load (0.8ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:16:10 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 6.4ms | Allocations: 8322)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237641819622488100)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToSentcharges (20200406211851)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.1ms)[0m  [1m[35mALTER TABLE "sent_charges" ADD "message" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237641819622488100)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237641819622488100)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToSentcharges (20200406211851)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.1ms)[0m  [1m[35mALTER TABLE "sentcharges" ADD "message" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200406211851"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237641819622488100)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/score" for ::1 at 2020-04-06 17:21:49 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"test", "charge"=>{"message"=>"test"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (4.5ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "test"], ["created_at", "2020-04-06 21:21:49.841774"], ["updated_at", "2020-04-06 21:21:49.841774"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 575ms (Views: 0.4ms | ActiveRecord: 13.8ms | Allocations: 32935)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 17:21:49 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>90, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>90, "sent_user_id"=>2, "sentiment_score"=>0, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.6ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (3.0ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 90], ["sent_user_id", 2], ["sentiment_score", 0.0], ["likes", 0], ["created_at", "2020-04-06 21:21:49.925885"], ["updated_at", "2020-04-06 21:21:49.925885"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 44ms (Views: 0.3ms | ActiveRecord: 15.2ms | Allocations: 17609)
+
+
+Started POST "/score" for ::1 at 2020-04-06 17:23:07 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"testing", "charge"=>{"message"=>"testing"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "testing"], ["created_at", "2020-04-06 21:23:07.503641"], ["updated_at", "2020-04-06 21:23:07.503641"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 271ms (Views: 0.7ms | ActiveRecord: 1.8ms | Allocations: 4962)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 17:23:07 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>91, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0.10000000149011612, "likes"=>0, "message"=>"testing", "sentcharge"=>{"user_id"=>1, "charge_id"=>91, "sent_user_id"=>2, "sentiment_score"=>0.10000000149011612, "likes"=>0, "message"=>"testing"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.6ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at", "message") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 91], ["sent_user_id", 2], ["sentiment_score", 0.10000000149011612], ["likes", 0], ["created_at", "2020-04-06 21:23:07.539829"], ["updated_at", "2020-04-06 21:23:07.539829"], ["message", "testing"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 12ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 4533)
+
+
+Started POST "/score" for ::1 at 2020-04-06 17:23:28 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome", "charge"=>{"message"=>"you are awesome"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome"], ["created_at", "2020-04-06 21:23:28.945694"], ["updated_at", "2020-04-06 21:23:28.945694"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 392ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 4811)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 17:23:28 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>92, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0, "message"=>"you are awesome", "sentcharge"=>{"user_id"=>1, "charge_id"=>92, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0, "message"=>"you are awesome"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.9ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.5ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at", "message") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 92], ["sent_user_id", 2], ["sentiment_score", 0.800000011920929], ["likes", 0], ["created_at", "2020-04-06 21:23:28.973963"], ["updated_at", "2020-04-06 21:23:28.973963"], ["message", "you are awesome"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 14ms (Views: 0.4ms | ActiveRecord: 4.7ms | Allocations: 4532)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:24:07 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2326)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:24:43 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2289)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:25:18 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (2.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 2304)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:29:56 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.2ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2304)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:31:38 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:32:41 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:33:25 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:33:48 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:34:11 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:34:44 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:52:27 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 2383)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:53:09 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (6.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 6.8ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:53:35 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:54:17 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.0ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:54:24 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (2.9ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:54:27 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:54:30 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:54:43 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:54:52 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:55:33 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:55:48 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:56:08 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:56:24 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:56:26 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:56:32 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:56:38 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2289)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:58:35 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 17:59:50 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:00:19 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.0ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:10:17 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (2.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 8349)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:10:19 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (5.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 5.6ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:10:29 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:11:05 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2289)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:11:11 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:12:58 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:13:10 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 3ms (ActiveRecord: 0.5ms | Allocations: 764)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:13:32 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.5ms | Allocations: 617)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:13:45 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:13:47 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 617)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:15:06 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.1ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:15:26 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:15:37 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:15:46 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 616)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:18:27 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (216.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 230ms (Views: 0.5ms | ActiveRecord: 216.7ms | Allocations: 2287)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:18:28 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:02 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:07 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (1.9ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 4ms (ActiveRecord: 1.9ms | Allocations: 617)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:08 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.5ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:08 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 617)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:09 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>5, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>5, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 1ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:11 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>6, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>6, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:53 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>7, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>7, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:19:55 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>8, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>8, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 3ms (ActiveRecord: 0.6ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/2" for ::1 at 2020-04-06 18:19:57 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil, "sentcharge"=>{"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/2" for ::1 at 2020-04-06 18:19:58 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil, "sentcharge"=>{"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/2" for ::1 at 2020-04-06 18:20:04 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil, "sentcharge"=>{"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.5ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/2" for ::1 at 2020-04-06 18:20:05 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil, "sentcharge"=>{"id"=>"2", "user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:37:09.249Z", "updated_at"=>"2020-04-06T20:37:09.249Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:20:07 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>9, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>9, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 3ms (ActiveRecord: 0.5ms | Allocations: 616)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:23:52 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:26:22 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (2.1ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:26:52 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:26:54 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:27:07 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:27:08 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 1ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:27:08 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>5, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>5, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:27:08 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>6, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>6, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:27:14 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 2289)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:28:22 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2284)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:30:56 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms | Allocations: 618)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:30:56 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>2, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (2.2ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 5ms (ActiveRecord: 2.2ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:30:57 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>3, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:30:59 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>4, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:31:21 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.0ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:31:28 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:31:33 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil, "sentcharge"=>{"id"=>"1", "user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "sentiment_score"=>nil, "likes"=>1, "created_at"=>"2020-04-06T20:34:22.656Z", "updated_at"=>"2020-04-06T20:34:22.656Z", "message"=>nil}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:36:22 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2284)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:37:46 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:38:04 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.9ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:38:05 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 204 No Content in 3ms (ActiveRecord: 0.4ms | Allocations: 571)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:44:41 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (6.0ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 6.0ms | Allocations: 2383)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:47:03 -0400
+  
+SyntaxError (/Users/natey37/Documents/final_project/backend/positively_charged/app/controllers/sentcharges_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting '}'
+...'sentharge successfully' edited}
+...                         ^~~~~~):
+  
+app/controllers/sentcharges_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/sentcharges_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:48:17 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 266ms (Views: 0.1ms | ActiveRecord: 237.3ms | Allocations: 8610)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:48:18 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (19.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 19.8ms | Allocations: 789)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "sentcharges".* FROM "sentcharges" WHERE (1) LIMIT $1
+                                                         ^
+):
+  
+app/controllers/sentcharges_controller.rb:24:in `update'
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:50:09 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2285)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:50:14 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (1.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.5ms | Allocations: 766)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "sentcharges".* FROM "sentcharges" WHERE (1) LIMIT $1
+                                                         ^
+):
+  
+app/controllers/sentcharges_controller.rb:24:in `update'
+Started GET "/sentcharges" for ::1 at 2020-04-06 18:51:54 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2285)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:51:59 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (1.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.4ms | Allocations: 767)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "sentcharges".* FROM "sentcharges" WHERE (1) LIMIT $1
+                                                         ^
+):
+  
+app/controllers/sentcharges_controller.rb:24:in `update'
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 18:52:53 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (3.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 12.5ms | Allocations: 5765)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, Integer passed.):
+  
+app/controllers/sentcharges_controller.rb:25:in `update'
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:07:09 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.9ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 8349)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:07:11 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (2.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.6ms | Allocations: 787)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, Integer passed.):
+  
+app/controllers/sentcharges_controller.rb:25:in `update'
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:08:37 -0400
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (1.2ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 7.6ms | Allocations: 9465)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:08:38 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.4ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (8.3ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:08:38.894104"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 62ms (Views: 0.1ms | ActiveRecord: 25.3ms | Allocations: 18834)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:08:40 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.6ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:08:40.160974"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 5050)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:08:42 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2304)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:08:47 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.5ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:08:47.944168"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 5050)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:08:48 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (1.0ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.4ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:08:48.402223"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 5035)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:08:54 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2285)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:10:01 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:10:12 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2284)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:11:43 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (8.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 8.7ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:11:47 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:11:56 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.4ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (2.3ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:11:56.626639"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 8.8ms | Allocations: 5029)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:12:01 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.4ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:12:01.480435"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 5034)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:12:07 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2284)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:12:23 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2284)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:14:14 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>3, "id"=>"1", "sentcharge"=>{"likes"=>3}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.1ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.3ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 3], ["updated_at", "2020-04-06 23:14:14.533518"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 15.7ms | Allocations: 21541)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:14:45 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (2.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:14:50 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:14:59 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:15:32 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:15:36 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>"1", "id"=>"1", "sentcharge"=>{"likes"=>"1"}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.3ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:15:36.217404"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 5156)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:15:39 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (1.8ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:15:39.418465"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 5147)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:15:41 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:15:43 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>"1", "id"=>"1", "sentcharge"=>{"likes"=>"1"}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.5ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:15:43.869325"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:15:45 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (1.2ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:15:45.717599"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 5147)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:15:50 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2284)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:16:22 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:16:47 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (2.1ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:16:50 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:16:57 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:17:01 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:17:08 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.6ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:17:08.806037"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:17:10 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.4ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:17:10.349360"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 5147)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:17:15 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2284)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:17:50 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:17:53 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:18:13 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (8.2ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 8.2ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:18:31 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:18:33 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>3, "id"=>"1", "sentcharge"=>{"likes"=>3}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.5ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 3], ["updated_at", "2020-04-06 23:18:33.909405"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:18:35 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>4, "id"=>"1", "sentcharge"=>{"likes"=>4}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.6ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 4], ["updated_at", "2020-04-06 23:18:35.095433"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 5151)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:18:42 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2284)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:19:18 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (21.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 21.4ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:19:37 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.9ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:19:39 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2286)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:19:52 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>5, "id"=>"1", "sentcharge"=>{"likes"=>5}}
+  [1m[36mSentcharge Load (0.2ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (19.5ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 5], ["updated_at", "2020-04-06 23:19:52.638831"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 21.4ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:19:53 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>6, "id"=>"1", "sentcharge"=>{"likes"=>6}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (1.8ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.6ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 6], ["updated_at", "2020-04-06 23:19:53.718281"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 40ms (Views: 0.8ms | ActiveRecord: 28.2ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:19:54 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>7, "id"=>"1", "sentcharge"=>{"likes"=>7}}
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.4ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 7], ["updated_at", "2020-04-06 23:19:54.839354"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 5147)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:19:57 -0400
+Processing by SentchargesController#index as */*
+  [1m[36mSentcharge Load (0.7ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2286)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 19:20:08 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2284)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:20:30 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>1, "id"=>"1", "sentcharge"=>{"likes"=>1}}
+  [1m[36mSentcharge Load (0.2ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.4ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 1], ["updated_at", "2020-04-06 23:20:30.735206"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:20:33 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>2, "id"=>"1", "sentcharge"=>{"likes"=>2}}
+  [1m[36mSentcharge Load (0.5ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.4ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 2], ["updated_at", "2020-04-06 23:20:33.897256"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 5147)
+
+
+Started PATCH "/sentcharges/1" for ::1 at 2020-04-06 19:20:36 -0400
+Processing by SentchargesController#update as */*
+  Parameters: {"likes"=>3, "id"=>"1", "sentcharge"=>{"likes"=>3}}
+  [1m[36mSentcharge Load (0.3ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges" WHERE "sentcharges"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:24:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mCharge Load (0.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[36mSentcharge Update (0.6ms)[0m  [1m[33mUPDATE "sentcharges" SET "likes" = $1, "updated_at" = $2 WHERE "sentcharges"."id" = $3[0m  [["likes", 3], ["updated_at", "2020-04-06 23:20:36.758670"], ["id", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:25:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 5147)
+
+
