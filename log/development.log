@@ -2246,3 +2246,780 @@ Processing by ChargesController#score as */*
 Completed 201 Created in 476ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 4630)
 
 
+Started POST "/score" for ::1 at 2020-04-06 15:45:00 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you sucks", "charge"=>{"message"=>"you sucks"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (7.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you sucks"], ["created_at", "2020-04-06 19:45:00.724178"], ["updated_at", "2020-04-06 19:45:00.724178"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 603ms (Views: 0.3ms | ActiveRecord: 33.4ms | Allocations: 32976)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:45:17 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are okay", "charge"=>{"message"=>"you are okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.5ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are okay"], ["created_at", "2020-04-06 19:45:17.389276"], ["updated_at", "2020-04-06 19:45:17.389276"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 207ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 4845)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:45:26 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great", "charge"=>{"message"=>"you are great"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.7ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great"], ["created_at", "2020-04-06 19:45:26.354065"], ["updated_at", "2020-04-06 19:45:26.354065"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 353ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4876)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:46:02 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great but you also kinda suck", "charge"=>{"message"=>"you are great but you also kinda suck"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.4ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great but you also kinda suck"], ["created_at", "2020-04-06 19:46:02.376058"], ["updated_at", "2020-04-06 19:46:02.376058"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 236ms (Views: 0.5ms | ActiveRecord: 3.5ms | Allocations: 4621)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:48:47 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great", "charge"=>{"message"=>"you are great"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (5.3ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great"], ["created_at", "2020-04-06 19:48:48.470726"], ["updated_at", "2020-04-06 19:48:48.470726"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 513ms (Views: 0.7ms | ActiveRecord: 6.3ms | Allocations: 4800)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:50:15 -0400
+  
+SyntaxError (/Users/natey37/Documents/final_project/backend/positively_charged/app/controllers/charges_controller.rb:12: syntax error, unexpected '}', expecting =>
+...ssfully', score: score, charge}, status: :created
+...                              ^):
+  
+app/controllers/charges_controller.rb:12: syntax error, unexpected '}', expecting =>
+app/controllers/charges_controller.rb:12: syntax error, unexpected '}', expecting =>
+Started POST "/score" for ::1 at 2020-04-06 15:50:55 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you great", "charge"=>{"message"=>"you great"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you great"], ["created_at", "2020-04-06 19:50:56.003141"], ["updated_at", "2020-04-06 19:50:56.003141"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 241ms (Views: 0.7ms | ActiveRecord: 9.2ms | Allocations: 7380)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:53:17 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"id test", "charge"=>{"message"=>"id test"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "id test"], ["created_at", "2020-04-06 19:53:17.479504"], ["updated_at", "2020-04-06 19:53:17.479504"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 475ms (Views: 0.9ms | ActiveRecord: 2.2ms | Allocations: 4696)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:03:46 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"hello", "charge"=>{"message"=>"hello"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (7.0ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2020-04-06 20:03:46.649666"], ["updated_at", "2020-04-06 20:03:46.649666"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 382ms (Views: 0.5ms | ActiveRecord: 8.3ms | Allocations: 7025)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:08:12 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"youre awesome", "charge"=>{"message"=>"youre awesome"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "youre awesome"], ["created_at", "2020-04-06 20:08:12.485222"], ["updated_at", "2020-04-06 20:08:12.485222"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 337ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 4790)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:08:24 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you suck", "charge"=>{"message"=>"you suck"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you suck"], ["created_at", "2020-04-06 20:08:24.471949"], ["updated_at", "2020-04-06 20:08:24.471949"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 316ms (Views: 0.6ms | ActiveRecord: 1.5ms | Allocations: 4841)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:19:05 -0400
+Processing by SentchargesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1692)
+
+
+  
+NameError (uninitialized constant SentchargesController::Sentcharges):
+  
+app/controllers/sentcharges_controller.rb:4:in `index'
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:19:43 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms | Allocations: 1679)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:19:45 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started GET "/sentcharge" for ::1 at 2020-04-06 16:19:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sentcharge"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:20:04 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:20:07 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/sentcharge" for ::1 at 2020-04-06 16:20:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sentcharge"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:20:14 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started GET "/getcharges" for ::1 at 2020-04-06 16:21:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/getcharges"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:22:10 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/getcharges" for ::1 at 2020-04-06 16:22:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/getcharges"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:22:22 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:22:28 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/charges" for ::1 at 2020-04-06 16:22:35 -0400
+Processing by ChargesController#index as HTML
+  [1m[36mCharge Load (5.9ms)[0m  [1m[34mSELECT "charges".* FROM "charges"[0m
+  ↳ app/controllers/charges_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 21.2ms | Allocations: 13570)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:22:40 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/%PUBLIC_URL%/manifest.json" for ::1 at 2020-04-06 16:22:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/manifest.json"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/%PUBLIC_URL%/favicon.ico" for ::1 at 2020-04-06 16:22:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%PUBLIC_URL%/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-04-06 16:22:49 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (29.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 31.0ms | Allocations: 2718)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:22:55 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:23:29 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 1188)
+
+
+Started GET "/charges" for ::1 at 2020-04-06 16:23:37 -0400
+Processing by ChargesController#index as HTML
+  [1m[36mCharge Load (0.9ms)[0m  [1m[34mSELECT "charges".* FROM "charges"[0m
+  ↳ app/controllers/charges_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 6.8ms | Allocations: 14317)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:23:42 -0400
+Processing by SentchargesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 39)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:24:20 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (3.8ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 6.6ms | Allocations: 1876)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:24:56 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome", "charge"=>{"message"=>"you are awesome"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome"], ["created_at", "2020-04-06 20:24:56.976943"], ["updated_at", "2020-04-06 20:24:56.976943"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 710ms (Views: 0.5ms | ActiveRecord: 10.6ms | Allocations: 32614)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:24:57 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>77, "user_id"=>1, "sent_user_id"=>2, "score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>77, "sent_user_id"=>2, "likes"=>0}}
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 70205)
+
+
+  
+NameError (undefined local variable or method `sentcharge_params' for #<SentchargesController:0x00007fe88a566560>
+Did you mean?  sentcharge_path
+               sentcharge_url
+               sentcharges_path):
+  
+app/controllers/sentcharges_controller.rb:9:in `create'
+Started POST "/score" for ::1 at 2020-04-06 16:28:43 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome", "charge"=>{"message"=>"you are awesome"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.4ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome"], ["created_at", "2020-04-06 20:28:44.467581"], ["updated_at", "2020-04-06 20:28:44.467581"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 382ms (Views: 0.3ms | ActiveRecord: 7.6ms | Allocations: 7336)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:28:44 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>78, "user_id"=>1, "sent_user_id"=>2, "score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>78, "sent_user_id"=>2, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (3.7ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (4.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 27.2ms | Allocations: 87399)
+
+
+  
+NameError (undefined local variable or method `charge' for #<SentchargesController:0x00007fe88a555da0>
+Did you mean?  charge_url):
+  
+app/controllers/sentcharges_controller.rb:14:in `create'
+Started POST "/score" for ::1 at 2020-04-06 16:29:51 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome", "charge"=>{"message"=>"you are awesome"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.2ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome"], ["created_at", "2020-04-06 20:29:52.233613"], ["updated_at", "2020-04-06 20:29:52.233613"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 454ms (Views: 0.7ms | ActiveRecord: 9.7ms | Allocations: 33156)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:29:52 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>79, "user_id"=>1, "sent_user_id"=>2, "score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>79, "sent_user_id"=>2, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.4ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 400 Bad Request in 32ms (Views: 0.1ms | ActiveRecord: 14.4ms | Allocations: 13744)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nathan Brickett"], ["email", "natey@natey.com"], ["username", "natey37"], ["password_digest", ""], ["created_at", "2020-04-06 20:33:34.438047"], ["updated_at", "2020-04-06 20:33:34.438047"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hannah Lindner"], ["email", "hannah@natey.com"], ["username", "hannah69"], ["password_digest", ""], ["created_at", "2020-04-06 20:33:34.446614"], ["updated_at", "2020-04-06 20:33:34.446614"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/score" for ::1 at 2020-04-06 16:34:21 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome", "charge"=>{"message"=>"you are awesome"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.1ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome"], ["created_at", "2020-04-06 20:34:22.585585"], ["updated_at", "2020-04-06 20:34:22.585585"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 515ms (Views: 0.5ms | ActiveRecord: 9.5ms | Allocations: 33083)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:34:22 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>80, "user_id"=>1, "sent_user_id"=>2, "score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>80, "sent_user_id"=>2, "likes"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (2.9ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 80], ["sent_user_id", 2], ["likes", 0], ["created_at", "2020-04-06 20:34:22.656357"], ["updated_at", "2020-04-06 20:34:22.656357"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 40ms (Views: 0.3ms | ActiveRecord: 17.4ms | Allocations: 17005)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:34:42 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.6ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 810)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:37:08 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome take 1", "charge"=>{"message"=>"you are awesome take 1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome take 1"], ["created_at", "2020-04-06 20:37:09.211736"], ["updated_at", "2020-04-06 20:37:09.211736"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 331ms (Views: 0.9ms | ActiveRecord: 3.5ms | Allocations: 4942)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:37:09 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>81, "user_id"=>1, "sent_user_id"=>2, "score"=>0.699999988079071, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>81, "sent_user_id"=>2, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.5ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.9ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 81], ["sent_user_id", 2], ["likes", 0], ["created_at", "2020-04-06 20:37:09.249457"], ["updated_at", "2020-04-06 20:37:09.249457"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 12ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 4457)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:37:54 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome take 2", "charge"=>{"message"=>"you are awesome take 2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.5ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome take 2"], ["created_at", "2020-04-06 20:37:55.199918"], ["updated_at", "2020-04-06 20:37:55.199918"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 355ms (Views: 0.8ms | ActiveRecord: 12.2ms | Allocations: 7107)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:37:55 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>82, "user_id"=>1, "sent_user_id"=>2, "score"=>0.699999988079071, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>82, "sent_user_id"=>2, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.8ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.4ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 82], ["sent_user_id", 2], ["likes", 0], ["created_at", "2020-04-06 20:37:55.282966"], ["updated_at", "2020-04-06 20:37:55.282966"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 43ms (Views: 0.7ms | ActiveRecord: 15.6ms | Allocations: 15183)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:38:19 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome take3", "charge"=>{"message"=>"you are awesome take3"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (7.1ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome take3"], ["created_at", "2020-04-06 20:38:20.040447"], ["updated_at", "2020-04-06 20:38:20.040447"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 362ms (Views: 0.7ms | ActiveRecord: 13.5ms | Allocations: 32733)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:38:20 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>83, "user_id"=>1, "sent_user_id"=>2, "score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>83, "sent_user_id"=>2, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.7ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.8ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 83], ["sent_user_id", 2], ["likes", 0], ["created_at", "2020-04-06 20:38:20.188577"], ["updated_at", "2020-04-06 20:38:20.188577"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 66ms (Views: 0.8ms | ActiveRecord: 21.3ms | Allocations: 17005)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:39:19 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome take5", "charge"=>{"message"=>"you are awesome take5"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.7ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome take5"], ["created_at", "2020-04-06 20:39:20.474491"], ["updated_at", "2020-04-06 20:39:20.474491"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 467ms (Views: 0.5ms | ActiveRecord: 12.0ms | Allocations: 33031)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:39:20 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>84, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>84, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.4ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.5ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 84], ["sent_user_id", 2], ["sentiment_score", 0], ["likes", 0], ["created_at", "2020-04-06 20:39:20.548928"], ["updated_at", "2020-04-06 20:39:20.548928"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 36ms (Views: 0.3ms | ActiveRecord: 11.8ms | Allocations: 17029)
+
+
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237641819622488100)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeScoreToBeFloatInSentcharges (20200406204615)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200406204615"]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237641819622488100)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237641819622488100)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237641819622488100)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237641819622488100)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeScoreToBeFloatInSentcharges (20200406204615)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.3ms)[0m  [1m[35mALTER TABLE "sentcharges" ALTER COLUMN "sentiment_score" TYPE integer[0m
+  [1m[36mprimary::SchemaMigration Destroy (6.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200406204615"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237641819622488100)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6237641819622488100)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeScoreToBeFloatInSentcharges (20200406204615)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.9ms)[0m  [1m[35mALTER TABLE "sentcharges" ALTER COLUMN "sentiment_score" TYPE float[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200406204615"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6237641819622488100)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/score" for ::1 at 2020-04-06 16:52:52 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are awesome", "charge"=>{"message"=>"you are awesome"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.4ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are awesome"], ["created_at", "2020-04-06 20:52:53.599300"], ["updated_at", "2020-04-06 20:52:53.599300"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 572ms (Views: 0.6ms | ActiveRecord: 12.3ms | Allocations: 32810)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:52:53 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>85, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>85, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.4ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (1.0ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 85], ["sent_user_id", 2], ["sentiment_score", 0.800000011920929], ["likes", 0], ["created_at", "2020-04-06 20:52:53.675405"], ["updated_at", "2020-04-06 20:52:53.675405"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 39ms (Views: 0.3ms | ActiveRecord: 16.4ms | Allocations: 17037)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:53:21 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (2.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 1458)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:56:30 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"youre okay", "charge"=>{"message"=>"youre okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "youre okay"], ["created_at", "2020-04-06 20:56:31.213082"], ["updated_at", "2020-04-06 20:56:31.213082"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 278ms (Views: 1.0ms | ActiveRecord: 2.1ms | Allocations: 4962)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:56:31 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>86, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>86, "sent_user_id"=>2, "sentiment_score"=>0, "likes"=>0}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.7ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.7ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 86], ["sent_user_id", 2], ["sentiment_score", 0.0], ["likes", 0], ["created_at", "2020-04-06 20:56:31.250697"], ["updated_at", "2020-04-06 20:56:31.250697"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 16ms (Views: 0.5ms | ActiveRecord: 6.3ms | Allocations: 4487)
+
+
+Started GET "/sentcharges" for ::1 at 2020-04-06 16:57:01 -0400
+Processing by SentchargesController#index as HTML
+  [1m[36mSentcharge Load (0.4ms)[0m  [1m[34mSELECT "sentcharges".* FROM "sentcharges"[0m
+  ↳ app/controllers/sentcharges_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1543)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:58:44 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you suck", "charge"=>{"message"=>"you suck"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you suck"], ["created_at", "2020-04-06 20:58:44.687591"], ["updated_at", "2020-04-06 20:58:44.687591"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 443ms (Views: 0.8ms | ActiveRecord: 2.1ms | Allocations: 4945)
+
+
+Started POST "/score" for ::1 at 2020-04-06 16:59:00 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great!", "charge"=>{"message"=>"you are great!"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.3ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great!"], ["created_at", "2020-04-06 20:59:00.874287"], ["updated_at", "2020-04-06 20:59:00.874287"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 420ms (Views: 0.3ms | ActiveRecord: 14.1ms | Allocations: 4769)
+
+
+Started POST "/sentcharges" for ::1 at 2020-04-06 16:59:00 -0400
+Processing by SentchargesController#create as */*
+  Parameters: {"charge_id"=>88, "user_id"=>1, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0, "sentcharge"=>{"user_id"=>1, "charge_id"=>88, "sent_user_id"=>2, "sentiment_score"=>0.800000011920929, "likes"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mCharge Load (0.3ms)[0m  [1m[34mSELECT "charges".* FROM "charges" WHERE "charges"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[36mSentcharge Create (0.4ms)[0m  [1m[32mINSERT INTO "sentcharges" ("user_id", "charge_id", "sent_user_id", "sentiment_score", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["charge_id", 88], ["sent_user_id", 2], ["sentiment_score", 0.800000011920929], ["likes", 0], ["created_at", "2020-04-06 20:59:00.953260"], ["updated_at", "2020-04-06 20:59:00.953260"]]
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sentcharges_controller.rb:11:in `create'
+Completed 201 Created in 27ms (Views: 0.3ms | ActiveRecord: 21.4ms | Allocations: 4489)
+
+

@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
         charge = Charge.new(score_params)
         score = charge.getScore(score_params)
         if charge.save
-            render json: {status: 'Charge created successfully', score: score}, status: :created
+            render json: {status: 'Charge created successfully', score: score, charge: charge}, status: :created
         else
             render json: { errors: charge.errors.full_messages }, status: :bad_request
         end
