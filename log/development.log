@@ -1816,3 +1816,433 @@ Processing by ChargesController#score as */*
 Completed 201 Created in 592ms (Views: 0.3ms | ActiveRecord: 19.9ms | Allocations: 32805)
 
 
+Started POST "/score" for ::1 at 2020-04-06 14:26:59 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"testing", "charge"=>{"message"=>"testing"}}
+Started POST "/score" for ::1 at 2020-04-06 14:27:03 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"testing", "charge"=>{"message"=>"testing"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "testing"], ["created_at", "2020-04-06 18:27:03.296907"], ["updated_at", "2020-04-06 18:27:03.296907"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 4049ms (Views: 0.3ms | ActiveRecord: 13.9ms | Allocations: 37743)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.7ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "testing"], ["created_at", "2020-04-06 18:27:04.317975"], ["updated_at", "2020-04-06 18:27:04.317975"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 1107ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 7535)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:36:06 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"everything sucks!", "charge"=>{"message"=>"everything sucks!"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.0ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "everything sucks!"], ["created_at", "2020-04-06 18:36:06.412368"], ["updated_at", "2020-04-06 18:36:06.412368"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 243ms (Views: 0.6ms | ActiveRecord: 3.1ms | Allocations: 4713)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:37:03 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"everything sucks!", "charge"=>{"message"=>"everything sucks!"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "everything sucks!"], ["created_at", "2020-04-06 18:37:03.431271"], ["updated_at", "2020-04-06 18:37:03.431271"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 368ms (Views: 0.3ms | ActiveRecord: 4.8ms | Allocations: 4970)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:38:31 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"this okay", "charge"=>{"message"=>"this okay"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.1ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "this okay"], ["created_at", "2020-04-06 18:38:31.569617"], ["updated_at", "2020-04-06 18:38:31.569617"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 227ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 4545)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:39:20 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"this okay", "charge"=>{"message"=>"this okay"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "this okay"], ["created_at", "2020-04-06 18:39:20.345010"], ["updated_at", "2020-04-06 18:39:20.345010"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 187ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 4600)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:39:36 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"this awesome", "charge"=>{"message"=>"this awesome"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "this awesome"], ["created_at", "2020-04-06 18:39:36.588318"], ["updated_at", "2020-04-06 18:39:36.588318"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 469ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4729)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:40:12 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"this okay", "charge"=>{"message"=>"this okay"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "this okay"], ["created_at", "2020-04-06 18:40:12.775851"], ["updated_at", "2020-04-06 18:40:12.775851"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 223ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 4904)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:42:41 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"youre awesome", "charge"=>{"message"=>"youre awesome"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.2ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "youre awesome"], ["created_at", "2020-04-06 18:42:41.526728"], ["updated_at", "2020-04-06 18:42:41.526728"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 469ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 4795)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:42:57 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"youre okay\n", "charge"=>{"message"=>"youre okay\n"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.6ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "youre okay\n"], ["created_at", "2020-04-06 18:42:58.011722"], ["updated_at", "2020-04-06 18:42:58.011722"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 371ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 4836)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:43:04 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you suck\n", "charge"=>{"message"=>"you suck\n"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.7ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you suck\n"], ["created_at", "2020-04-06 18:43:04.297621"], ["updated_at", "2020-04-06 18:43:04.297621"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 210ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 4604)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:44:10 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you suck", "charge"=>{"message"=>"you suck"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.2ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you suck"], ["created_at", "2020-04-06 18:44:10.717453"], ["updated_at", "2020-04-06 18:44:10.717453"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 356ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 4725)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:44:15 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.0ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 18:44:15.735897"], ["updated_at", "2020-04-06 18:44:15.735897"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 420ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 4825)
+
+
+Started POST "/score" for ::1 at 2020-04-06 14:44:20 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you great", "charge"=>{"message"=>"you great"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you great"], ["created_at", "2020-04-06 18:44:20.892395"], ["updated_at", "2020-04-06 18:44:20.892395"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 341ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 4901)
+
+
+Started GET "/charges" for ::1 at 2020-04-06 14:59:39 -0400
+Processing by ChargesController#index as HTML
+  [1m[36mCharge Load (3.2ms)[0m  [1m[34mSELECT "charges".* FROM "charges"[0m
+  ↳ app/controllers/charges_controller.rb:5:in `index'
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 5387)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:00:14 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you great test", "charge"=>{"message"=>"you great test"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you great test"], ["created_at", "2020-04-06 19:00:14.896040"], ["updated_at", "2020-04-06 19:00:14.896040"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 442ms (Views: 0.2ms | ActiveRecord: 6.0ms | Allocations: 4726)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:00:17 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you great test", "charge"=>{"message"=>"you great test"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you great test"], ["created_at", "2020-04-06 19:00:17.711058"], ["updated_at", "2020-04-06 19:00:17.711058"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 215ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 4504)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:00:18 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you great test", "charge"=>{"message"=>"you great test"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.4ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you great test"], ["created_at", "2020-04-06 19:00:19.237805"], ["updated_at", "2020-04-06 19:00:19.237805"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 434ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 4626)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:00:41 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great", "charge"=>{"message"=>"you are great"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.5ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great"], ["created_at", "2020-04-06 19:00:41.720445"], ["updated_at", "2020-04-06 19:00:41.720445"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 464ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 4603)
+
+
+Started GET "/charges" for ::1 at 2020-04-06 15:00:57 -0400
+Processing by ChargesController#index as HTML
+  [1m[36mCharge Load (0.6ms)[0m  [1m[34mSELECT "charges".* FROM "charges"[0m
+  ↳ app/controllers/charges_controller.rb:5:in `index'
+Completed 200 OK in 60ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 5692)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:02:07 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"You are great", "charge"=>{"message"=>"You are great"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "You are great"], ["created_at", "2020-04-06 19:02:08.084275"], ["updated_at", "2020-04-06 19:02:08.084275"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 438ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 4756)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:02:19 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great", "charge"=>{"message"=>"you are great"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great"], ["created_at", "2020-04-06 19:02:19.706407"], ["updated_at", "2020-04-06 19:02:19.706407"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 213ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 4746)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:06:10 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you suck", "charge"=>{"message"=>"you suck"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.3ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you suck"], ["created_at", "2020-04-06 19:06:10.769477"], ["updated_at", "2020-04-06 19:06:10.769477"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 480ms (Views: 0.8ms | ActiveRecord: 4.3ms | Allocations: 4650)
+
+
+Started GET "/charges" for ::1 at 2020-04-06 15:06:29 -0400
+Processing by ChargesController#index as HTML
+  [1m[36mCharge Load (0.8ms)[0m  [1m[34mSELECT "charges".* FROM "charges"[0m
+  ↳ app/controllers/charges_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 5995)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:14:49 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"this okay", "charge"=>{"message"=>"this okay"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (3.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "this okay"], ["created_at", "2020-04-06 19:14:49.939848"], ["updated_at", "2020-04-06 19:14:49.939848"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (20.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 327ms (Views: 0.5ms | ActiveRecord: 24.7ms | Allocations: 4669)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:22:03 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.2ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:22:03.962852"], ["updated_at", "2020-04-06 19:22:03.962852"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 441ms (Views: 0.5ms | ActiveRecord: 3.4ms | Allocations: 4593)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:34:31 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (4.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:34:32.285733"], ["updated_at", "2020-04-06 19:34:32.285733"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 557ms (Views: 1.0ms | ActiveRecord: 8.5ms | Allocations: 4843)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:34:33 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.9ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:34:33.716306"], ["updated_at", "2020-04-06 19:34:33.716306"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 444ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 4975)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:34:37 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (9.7ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:34:37.503813"], ["updated_at", "2020-04-06 19:34:37.503813"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 394ms (Views: 1.1ms | ActiveRecord: 12.7ms | Allocations: 4550)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:36:15 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (4.1ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:36:16.070917"], ["updated_at", "2020-04-06 19:36:16.070917"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 369ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 4951)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:36:49 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:36:49.972567"], ["updated_at", "2020-04-06 19:36:49.972567"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 253ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 5000)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:37:18 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you okay", "charge"=>{"message"=>"you okay"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you okay"], ["created_at", "2020-04-06 19:37:18.996255"], ["updated_at", "2020-04-06 19:37:18.996255"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 578ms (Views: 0.6ms | ActiveRecord: 27.6ms | Allocations: 4882)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:37:53 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"you are great", "charge"=>{"message"=>"you are great"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (0.8ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "you are great"], ["created_at", "2020-04-06 19:37:54.320587"], ["updated_at", "2020-04-06 19:37:54.320587"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 460ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 4995)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:38:51 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"i am neutral", "charge"=>{"message"=>"i am neutral"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (2.4ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "i am neutral"], ["created_at", "2020-04-06 19:38:52.108981"], ["updated_at", "2020-04-06 19:38:52.108981"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 344ms (Views: 0.4ms | ActiveRecord: 7.5ms | Allocations: 4825)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:39:08 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"i am neutral again", "charge"=>{"message"=>"i am neutral again"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (4.0ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "i am neutral again"], ["created_at", "2020-04-06 19:39:08.415762"], ["updated_at", "2020-04-06 19:39:08.415762"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 213ms (Views: 0.3ms | ActiveRecord: 4.9ms | Allocations: 4725)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:40:01 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"hey there stranger, hope youre having a great day!", "charge"=>{"message"=>"hey there stranger, hope youre having a great day!"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.0ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "hey there stranger, hope youre having a great day!"], ["created_at", "2020-04-06 19:40:01.790759"], ["updated_at", "2020-04-06 19:40:01.790759"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 280ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 4777)
+
+
+Started POST "/score" for ::1 at 2020-04-06 15:41:20 -0400
+Processing by ChargesController#score as */*
+  Parameters: {"message"=>"hey there stranger you are great!", "charge"=>{"message"=>"hey there stranger you are great!"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[36mCharge Create (1.1ms)[0m  [1m[32mINSERT INTO "charges" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "hey there stranger you are great!"], ["created_at", "2020-04-06 19:41:21.277655"], ["updated_at", "2020-04-06 19:41:21.277655"]]
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/charges_controller.rb:11:in `score'
+Completed 201 Created in 476ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 4630)
+
+
