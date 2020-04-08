@@ -34,6 +34,6 @@ class SentchargesController < ApplicationController
     private 
 
     def sentcharge_params 
-        params.require(:sentcharge).permit(:id, :charge_id, :user_id, :sent_user_id, :sentiment_score, :likes, :message)
+        params.require(:sentcharge).permit(:id, :charge_id, :user_id, :sent_user_id, :sentiment_score, :likes, :message, :username)
     end 
 end
