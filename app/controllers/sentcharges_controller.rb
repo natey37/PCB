@@ -2,7 +2,7 @@ class SentchargesController < ApplicationController
 
     def index 
         sentcharges = Sentcharge.all
-        render json: sentcharges.to_json
+        render json: sentcharges.to_json(include: [:chargetags])
     end 
 
     def create 
