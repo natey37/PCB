@@ -1,7 +1,6 @@
 require 'Test'
 
 class Charge < ApplicationRecord
-    has_many :favorites 
     has_many :users, through: :favorites 
     has_many :sent_charges 
     # has_many :charge_tags 
