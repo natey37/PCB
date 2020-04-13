@@ -21,14 +21,23 @@ class SentchargesController < ApplicationController
 
     def update
         puts params 
-        sentcharge = Sentcharge.find(params[:id])
-        sentcharge.update({likes: params[:likes]})
-        if sentcharge.save
-            render json: {status: 'sentcharge successfully edited', likes: sentcharge}
-        else
-            render json: { errors: sentcharge.errors.full_messages }, status: :bad_request
-        end
-
+        if params[:likes]
+            sentcharge = Sentcharge.find(params[:id])
+            sentcharge.update({likes: params[:likes]})
+            if sentcharge.save
+                render json: {status: 'sentcharge successfully edited', likes: sentcharge}
+            else
+                render json: { errors: sentcharge.errors.full_messages }, status: :bad_request
+            end
+        else 
+            sentcharge = Sentcharge.find(params[:id])
+            sentcharge.update({message: params[:message]})
+            if sentcharge.save
+                render json: {status: 'sentcharge successfully edited', message: sentcharge}
+            else
+                render json: { errors: sentcharge.errors.full_messages }, status: :bad_request
+            end
+        end 
     end
 
     def destroy 
