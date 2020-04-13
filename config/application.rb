@@ -42,7 +42,7 @@ module PositivelyCharged
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :patch, :score, :options]
+        resource '*', headers: :any, methods: [:get, :post, :patch, :delete, :score, :options]
       end
     end
   

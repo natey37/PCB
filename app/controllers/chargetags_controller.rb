@@ -19,6 +19,8 @@ class ChargetagsController < ApplicationController
             end
     end 
 
+   
+
     private 
 
     def chargetag_params 

@@ -31,6 +31,13 @@ class SentchargesController < ApplicationController
 
     end
 
+    def destroy 
+        puts params
+        sentcharge = Sentcharge.find(params[:id])
+        sentcharge.delete 
+        render json: {status: "sentcharge deleted!"}
+    end 
+
     private 
 
     def sentcharge_params 
