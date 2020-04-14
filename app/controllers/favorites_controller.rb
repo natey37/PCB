@@ -16,6 +16,13 @@ class FavoritesController < ApplicationController
             end
     end 
 
+    def destroy 
+        puts params
+        favorite = Favorite.find(params[:id])
+        favorite.delete 
+        render json: {status: "favorite deleted!"}
+    end 
+
     private 
 
     def favorite_params
